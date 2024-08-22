@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>RailsWatchList</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
-   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
@@ -42,6 +29,4 @@
     </div>
   </div>
 </div>
-    <%= yield %>
-  </body>
-</html>
+
