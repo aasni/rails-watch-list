@@ -1,9 +1,10 @@
-<h1>Lists Netflix</h1>
+<h1 class="card">My Netflix watchlist</h1>
+<div class="btn btn-info">
+<%= link_to 'New List', new_list_path %>
+</div>
 
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>
-
-<%= link_to 'New List', new_list_path %>

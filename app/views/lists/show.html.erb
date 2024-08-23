@@ -1,1 +1,13 @@
-<h1>hwllo</h1>
+<h1><%= @list.name %></h1>
+
+<h2>Movies in list:</h2>
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= movie.title %>
+      <%# link_to "🗑️", bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure lil bro bro?' } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a movie', new_list_bookmark_path(@list) %>

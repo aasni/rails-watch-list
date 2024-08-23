@@ -4,8 +4,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    @lists = List.find(params[:id])
-    @bookmarks = @list.bookmarks
+    @list = List.find(params[:id])
     @movies = @list.movies
   end
 
@@ -14,17 +13,12 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(params)
-    if @list.save
-      redirekt_to list_path(@list)
-    else
-      render.new
-    end
-  end
-
-  private
-
-  def params
-    params.require(:list)
+    # raise
+    # @list = List.new(params)
+    # if @list.save
+    #   redirect_to list_path(@list)
+    # else
+    #   render.new
+    # end
   end
 end

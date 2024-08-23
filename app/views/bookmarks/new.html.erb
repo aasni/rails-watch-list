@@ -1,2 +1,9 @@
-<h1>Bookmarks#new</h1>
-<p>Find me in app/views/bookmarks/new.html.erb</p>
+<h1>Add a Movie</h1>
+<%= @list.name %>
+<%= simple_form_for [@list, @bookmark] do |form| %>
+    <%= form.association :movie, prompt: "Select a movie", input_html: {data: {controller: "tom-select"}} %>
+    <%= form.text_area :comment %>
+    <%= form.button :submit %>
+<% end %>
+
+<%= link_to 'Back to List', list_path(@list) %>

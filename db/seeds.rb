@@ -19,6 +19,6 @@ Movie.create([
 
 
 
-100.times do
+10.times do
   List.create(name: Faker::ProgrammingLanguage.name)
 end
